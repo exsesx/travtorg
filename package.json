@@ -9,7 +9,6 @@
   "author": "Oleg Vanin",
   "license": "ISC",
   "dependencies": {
-    "owl": "0.0.6",
     "owl.carousel": "^2.2.0"
   }
 }
