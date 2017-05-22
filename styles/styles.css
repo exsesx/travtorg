@@ -1,6 +1,5 @@
 #bg {
-  position: fixed; 
-  background-color: black;
+  position: fixed;
   overflow: hidden;
   width: 100%;
   margin: 0;
@@ -528,6 +527,7 @@ td p {
             display: inline-block;
             vertical-align: top;
             padding: 0 0 0 5px;
+            margin-top: 15px;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
