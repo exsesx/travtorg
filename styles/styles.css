@@ -259,9 +259,7 @@ ul.menu li {
 ul.menu li a {
 	display: block;
 	padding: 10px 20px;
-	margin: 10px 20px;
 	margin-right: 0;
-	padding-left: 0;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
