@@ -1,10 +1,103 @@
+#bg {
+  position: fixed; 
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  opacity: 1;
+  z-index: 999;
+}
+
 body {
+	z-index: 1;
 	margin: 0;
 	font-family: 'Exo 2', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	border: 0;
 	padding: 0;
+	opacity: 0.99;
+	line-height: 1;
+}
+
+.form-container {
+	position: fixed;
+	top: 180px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.form-wrap {
+	display: flex;
+	background-color: rgba(255,255,255,1);
+	border-radius: 3px;
+	width: 790px;
+	height: 240px;
+	justify-content: center;
+	align-items: center;
+	opacity: 1 !important;
+}
+
+.form-info {
+	display: flex;
+	align-items: center;
+	width: 770px;
+	height: 220px;
+	border: 1px solid #cfcfcf;
+}
+
+.form-text {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.plus18 {
+	padding: 0 15px 0 15px;
+}
+
+.form-text p {
+	margin: 0;
+	margin-bottom: 35px;
+	font-size: 18px;
+}
+
+.age-confirm {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.age-confirm p {
+	padding-right: 15px;
+	font-size: 18px;
+}
+
+.confirm-button {
+	font-family: 'Exo 2';
+	width: 70px;
+	height: 24px;
+	font-size: 16px;
+	background: #fbb040;
+	border: none;
+	border-radius: 3px;
+	color: black;
+	margin-right: 10px;
+	padding: 0;
+}
+
+.confirm-button:hover {
+	background: transparent;
+	border: 1px solid black;
+}
+
+.age-confirm span {
+	margin-right: 30px;
+	font-size: 16px;
+	font-family: 'Exo 2';
 }
 
 header {
@@ -154,6 +247,8 @@ header {
 
 ul.menu li {
 	cursor: pointer;
+	text-align: center;
+	padding-left: 12px;
 }
 
 ul.menu li a {
@@ -224,7 +319,7 @@ ul.menu li:hover {
 	padding: 80px 0;
 }
 
-.collections-title {
+.title {
 	font-family: 'Exo 2';
 	font-size: 30px;
 	font-weight: 600;
@@ -284,6 +379,8 @@ ul.menu li:hover {
 
 .all-sorts-wrapper {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	max-width: 1100px;
 	width: 1100px;
 	margin: 0 auto;
@@ -294,14 +391,17 @@ ul.menu li:hover {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-
+	height: 30px;
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #dadada;
 }
+
 
 /*.all-sorts-navigation*/ .navigation {
 	display: flex;
 	list-style: none;
 	flex-direction: row;
-	padding-left: 0;
+	padding-left: 0;	
 }
 
 /*.all-sorts-navigation*/ .navigation li {
@@ -325,24 +425,255 @@ ul.menu li:hover {
 	justify-content: flex-end;
 	align-items: center;
 	text-align: center;
+	width: 50%;
+
 }
 
 .all-sorts-view span {
 	font-size: 24px;
+	padding-right: 20px;
 }
 
+.switch-menu {
+	background: #fbb040;
+	margin-right: 10px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+table {
+	border-collapse: collapseƒ;
+}
 
 th {
 	text-align: center;
-	font-size: 24px;
-	font-weight: normal;
-	border-bottom: 1px solid #dadada;
-	/*border: 1px solid black;*/
 }
 
 td {
 	text-align: center;
-	border: 1px solid black;
 }
+
+td p {
+	margin: 10px 0 10px 0;
+}
+
+
+ select {
+	padding-right: 18px;
+	padding-left: 10px;
+   appearance: none;
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   background: url(../images/icons/dropdown-arrow.png) no-repeat 88%;
+   border-radius: 3px;
+}
+
+.table-button {
+	font-family: 'Exo 2';
+	font-size: 16px;
+	background: #fbb040;
+	border: none;
+	border-radius: 3px;
+	color: black;
+	width: 110px; 
+	height: 30px;
+}
+
+.more {
+	height: 1030px;
+}
+
+.more-button {
+	font-family: 'Exo 2';
+	font-size: 16px;
+	background: #fbb040;
+	border: none;
+	border-radius: 3px;
+	color: black;
+	width: 220px;
+	height: 30px;
+	text-transform: uppercase;
+}
+
+.about-us {
+	padding: 80px 0;
+}
+
+.about-us-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1100px;
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.about-us-wrapper p {
+	font-size: 16px;
+}
+
+.notify-container {
+           display: -webkit-flex;
+           display: flex;
+           -webkit-flex-direction: row;
+           flex-direction: row;
+           -webkit-align-items: center;
+           align-items: center;
+           flex-wrap: wrap;
+        }
+        .notify-item {
+        margin-top: 40px;
+        }
+        
+        .notify-info{
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 0 5px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 68%;
+        }
+
+        .notify-info p{
+            padding: 0;
+            margin: 0 0 20px;
+        }
+
+
+.circle2 {
+fill: #fbb040;
+}
+
+.circle1 {
+  fill: white;
+  stroke: #fbb040;
+}
+
+text {
+	font-size: 32px;
+}
+
+.disturb-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.disturb-container p {
+	font-family: "Exo 2";
+	font-size: 18px;
+	padding-right: 50px;
+}
+
+.disturb-email {
+	width: 220px;
+	height: 30px;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;	
+	padding: 10px;
+	margin-right: 15px;
+}
+
+.ok-button {
+	font-family: 'Exo 2';
+	font-size: 14px;
+	background: #fbb040;
+	border: none;
+	border-radius: 3px;
+	color: black;
+	width: 50px;
+	height: 30px;
+	text-transform: uppercase;
+}
+
+footer {
+	width: 100%;
+	background: #ededed;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: center;
+
+}
+
+.footer-wrap {
+	display: flex;
+	width: 1100px;
+	justify-content: space-between;
+	
+}
+
+.footer-menu ul {
+	list-style: none;
+}
+
+.footer-menu2 ul {
+	list-style: none;
+}
+
+.social-container {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.footer-social {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.footer-social p {
+	padding-right: 15px;
+	font-size: 16px;
+}
+
+.footer-contacts {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.footer-contacts p {
+	padding-right: 15px;
+	font-size: 16px;
+}
+
+.footer-menu ul li {
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+
+.footer-menu ul li:last-child {
+	padding-bottom: 0;
+}
+
+.social-img {
+	height: 20px;
+	margin-right: 12px;
+}
+
+.social-img-skype {
+	height: 22px;
+	margin-right: 10px;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.copyright p {
+	display: flex;
+	font-size: 14px;
+}
+
+
+
 
 
