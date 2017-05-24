@@ -22,17 +22,28 @@ function getCookie(cname) {
 }
 
 $(document).ready(function (){
-    console.log('owlebala');
-     $('.owl-carousel').owlCarousel({
+    console.log('wtf');
+     $('#collections-owl').owlCarousel({
          items : 4,
+         loop: true,
          itemsDesktop : [1199,3],
          itemsDesktopSmall : [979,3],
          nav:true,
          navText : ["<img src='images/arrows/left-arrow.png'>","<img src='images/arrows/right-arrow.png'>"]
+
      });
 
+    $('#vendors-owl').owlCarousel({
+         items : 6,
+         loop: false,
+         itemsDesktop : [1199,3],
+         itemsDesktopSmall : [979,3],
+         nav:true,
+         navText : ["<img src='images/arrows/left-arrow.png'>","<img src='images/arrows/right-arrow.png'>"]
 
-    
+          });
+
+
 
      if(getCookie('popup') !== 'true') {
         $("#bg").css('position', 'fixed').css('pointer-events', 'none');
@@ -41,6 +52,8 @@ $(document).ready(function (){
     else {
             $("#bg").hide().css('pointer-events', 'auto');
         }
+
+
  });
 
 $("#yes").click(function(){

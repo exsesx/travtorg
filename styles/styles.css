@@ -165,6 +165,13 @@ header {
 	border-radius: 3px;
 	text-transform: uppercase;
 	color: #ffffff;
+	padding: 0;
+}
+
+.callback-button:hover {
+	background: transparent;
+	border: 1px solid #fbb040;
+	color: #fbb040;
 }
 
 .main-header {
@@ -253,6 +260,7 @@ ul.menu li {
 	cursor: pointer;
 	text-align: center;
 	width: 100%;
+	text-align: center;
 }
 
 ul.menu li a {
@@ -263,6 +271,7 @@ ul.menu li a {
 	text-transform: uppercase;
 	font-size: 16px;
 	border-right: 1px solid #80d3a8;
+
 }
 
 ul.menu li:hover {
@@ -316,6 +325,12 @@ ul.menu li:hover {
 	color: #ffffff;
 }
 
+.banner-button:hover {
+	background: rgba(0,0,0,0.5);
+	border: 1px solid #fbb040;
+	color: #fbb040;
+}
+
 .collections {
 	padding: 80px 0;
 }
@@ -332,6 +347,18 @@ ul.menu li:hover {
 	height: 100%;
 }
 
+.all-sorts-title {
+	font-family: 'Exo 2';
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 60px;
+	max-width: 1100px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
 .collections-wrapper {
 	display: flex;
 	max-width: 1200px;
@@ -341,43 +368,22 @@ ul.menu li:hover {
 	align-items: center;
 }
 
-.producers {
+.vendors {
 	padding: 80px 0;
 }
 
-.producers-title {
-	font-family: 'Exo 2';
-	font-size: 30px;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 70px;
-	max-width: 1100px;
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-}
-
-.producers-wrapper {
+.vendors-wrapper {
 	display: flex;
 	max-width: 1200px;
 	width: 1200px;
+	justify-content: center;
 	margin: 0 auto;
+	align-items: center;
+	max-height: 800px;
 }
 
 .all-sorts {
 	padding: 80px 0 0 0;
-}
-
-.all-sorts-title {
-	font-family: 'Exo 2';
-	font-size: 30px;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 70px;
-	max-width: 1100px;
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
 }
 
 .all-sorts-wrapper {
@@ -678,7 +684,8 @@ footer {
   margin: 32px;
 }
 
-.item img{
+
+#collections-owl .item img{
     display: block;
     width: 100%;
     height: auto;
@@ -686,6 +693,7 @@ footer {
 
 .collections-wrapper {
     position: relative;
+    padding-bottom: 30px;
 }
 
 #collections-owl {
@@ -694,7 +702,7 @@ footer {
 
 .owl-next {
  	position: absolute;
-    top: 50%;
+    top: 40%;
     left: 98%;
 
 }
@@ -705,7 +713,7 @@ footer {
 
 .owl-prev {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 98%;
 
     /* This value should be a negative half of the height of these elements! 
@@ -717,6 +725,51 @@ footer {
 .owl-prev:hover {
 	content: url(../images/arrows/left-arrow-hover.png);
 }
+
+.item-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-wrap p {
+	margin: 20px 0 10px 0;
+	font-weight: 600;
+}
+
+.item-wrap a {
+	text-decoration: underline;
+}
+
+#vendors-owl {
+	
+}
+
+#vendors-owl .item {
+	margin: 35px;
+}
+
+.owl-stage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#vendors-owl .item img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	max-width: 215px;
+	max-height: 75px;
+
+}
+
+.vendors-wrapper {
+	position: relative;
+	padding-bottom: 30px;
+}
+
 
 
 
