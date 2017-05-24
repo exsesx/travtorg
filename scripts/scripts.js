@@ -24,23 +24,29 @@ function getCookie(cname) {
 $(document).ready(function (){
     console.log('owlebala');
      $('.owl-carousel').owlCarousel({
-         items : 1,
+         items : 4,
          itemsDesktop : [1199,3],
          itemsDesktopSmall : [979,3],
          nav:true,
-         navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+         navText : ["<img src='images/arrows/left-arrow.png'>","<img src='images/arrows/right-arrow.png'>"]
      });
 
+
+    
+
      if(getCookie('popup') !== 'true') {
-        $("#bg").fadeTo(1000, 0.4).css('position', 'fixed').css('pointer-events', 'none');
+        $("#bg").css('position', 'fixed').css('pointer-events', 'none');
         $('.form-container').css('display', 'flex');
-        setCookie('popup', true, 1);
     }
+    else {
+            $("#bg").hide().css('pointer-events', 'auto');
+        }
  });
 
 $("#yes").click(function(){
     $(".form-container").hide();
     $("#bg").css("position", "inherit").css("opacity", "1").css("pointer-events", "auto");
+    setCookie('popup', true, 1);
 });
 
 $("#no").click(function(){

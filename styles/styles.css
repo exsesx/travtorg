@@ -1,17 +1,16 @@
 #bg {
-    /*position: inherit;*/
-    /*overflow: hidden;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background-color: rgba(0,0,0,0.5);*/
-    /*top:0;*/
-    /*left: 0;*/
-    /*margin: 0;*/
-    /*padding:0;*/
-    /*opacity: 1;*/
-    /*z-index: 999;*/
-    /*display: block;*/
-    /*position: fixed;*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+   	background-color: rgba(0,0,0,0.5);
+    top:0;
+    left: 0;
+    margin: 0;
+    padding:0;
+    opacity: 1;
+    z-index: 999;
+    display: block;
+    position: fixed;
 }
 
 body {
@@ -253,13 +252,12 @@ header {
 ul.menu li {
 	cursor: pointer;
 	text-align: center;
-	padding-left: 12px;
+	width: 100%;
 }
 
 ul.menu li a {
 	display: block;
 	padding: 10px 20px;
-	margin-right: 0;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -338,7 +336,9 @@ ul.menu li:hover {
 	display: flex;
 	max-width: 1200px;
 	width: 1200px;
+	justify-content: center;
 	margin: 0 auto;
+	align-items: center;
 }
 
 .producers {
@@ -406,6 +406,7 @@ ul.menu li:hover {
 	padding-left: 0;
     margin: 0;
 	justify-content: space-between;
+	min-width: 450px;
 }
 
 .navigation li {
@@ -672,11 +673,51 @@ footer {
 	font-size: 14px;
 }
 
+
+#collections-owl .item{
+  margin: 32px;
+}
+
 .item img{
     display: block;
-    width: 100px;
+    width: 100%;
     height: auto;
 }
+
+.collections-wrapper {
+    position: relative;
+}
+
+#collections-owl {
+	margin-top: 60px;
+}
+
+.owl-next {
+ 	position: absolute;
+    top: 50%;
+    left: 98%;
+
+}
+
+.owl-next:hover {
+	content: url(../images/arrows/right-arrow-hover.png);
+}
+
+.owl-prev {
+    position: absolute;
+    top: 50%;
+    right: 98%;
+
+    /* This value should be a negative half of the height of these elements! 
+        For example if their heights are 50px this value should be -25px.
+        margin-top...
+    */
+}
+
+.owl-prev:hover {
+	content: url(../images/arrows/left-arrow-hover.png);
+}
+
 
 
 
