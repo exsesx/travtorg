@@ -44,6 +44,14 @@ Utils.prototype = {
 var Utils = new Utils();
 
 $(document).ready(function (){
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'styles/safari.css';
+    document.head.insertBefore(link, document.head.children[3]);
+    //document.write('<link href="styles/safari.css" rel="stylesheet" type="text/css"/>');
+}
+
     console.log('wtf');
      $('#collections-owl').owlCarousel({
          items : 4,
@@ -63,12 +71,16 @@ $(document).ready(function (){
          navText : ["<img src='images/arrows/left-arrow.png'>","<img src='images/arrows/right-arrow.png'>"]
 
           });
+
      if(getCookie('popup') !== 'true') {
-        $("#bg").css('position', 'fixed').css('pointer-events', 'none');
+        $("body").css('pointer-events', 'none');
+        $("#bg").css('position', 'fixed');
+        $(".form-wrap").css('pointer-events', 'auto');
         $('.form-container').css('display', 'flex');
     }
     else {
-            $("#bg").hide().css('pointer-events', 'auto');
+            $("#bg").hide();
+            $("body").css('pointer-events', 'auto');
         }
  });
 
@@ -101,7 +113,8 @@ $(document).keyup(function (event) {
 
 $("#yes").click(function(){
     $(".form-container").hide();
-    $("#bg").css("position", "inherit").css("opacity", "1").css("pointer-events", "auto");
+    $("#bg").hide();
+    $("body").css('pointer-events', 'auto');
     setCookie('popup', true, 1);
 });
 
